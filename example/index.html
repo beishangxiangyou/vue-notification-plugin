@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>vue-notification-plugin</title>
+  <style>
+    #app .btn {
+      display: block;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 4px;
+      background-color: #1aaa55;
+      border-color: #168f48;
+      color: #fff;
+    }
+
+    #app .btn:active {
+      background-color: #168f48;
+    }
+  </style>
+</head>
+<body>
+
+<div id="app">
+  <a href="#" class="btn" @click.stop="_notify">点击我哦~</a>
+</div>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<script src="../dist/notify.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data() {
+      return {
+        msg: '请叫我斗图王。'
+      }
+    },
+    methods: {
+      _notify() {
+        /**
+         * btn: 'x',
+         * autoClose: '1500'
+         */
+        this.$notify({
+          content: '必须输入要做的内容'
+        })
+      }
+    }
+  })
+</script>
+</body>
+</html>

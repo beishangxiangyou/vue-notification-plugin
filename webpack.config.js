@@ -1,13 +1,38 @@
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path')
+const webpack = require('webpack')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
-module.exports = {
-  entry: './src/main.js',
-  output: {
+let isProd = process.env.NODE_ENV === 'production'
+
+/**
+ * 开发环境
+ */
+let entry = './src/main.js',
+  output = {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
     filename: 'build.js'
-  },
+  }
+
+/**
+ * 生产环境
+ */
+if (isProd) {
+  entry = './src/notification/index.js'
+  output = {
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/dist/',
+    filename: 'notify.js',// 起一个与项目相对应的名字
+    // library: 'VueNotify',// script脚本引入时的全局变量，VueNotify
+    libraryTarget: 'umd', // 支持commonjs，es module
+    umdNamedDefine: true // 会对 UMD 的构建过程中的 AMD 模块进行命名，否则就使用匿名的 define。
+  }
+}
+
+
+module.exports = {
+  entry,
+  output,
   module: {
     rules: [
       {
@@ -86,7 +111,7 @@ module.exports = {
   devtool: '#eval-source-map'
 }
 
-if (process.env.NODE_ENV === 'production') {
+if (isProd) {
   module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
@@ -103,6 +128,7 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
-    })
+    }),
+    new CleanWebpackPlugin()
   ])
 }
