@@ -26,6 +26,7 @@ export default {
       }
     },
     afterEnter() {
+      console.log(1111111111111111)
       this.height = this.$el.offsetHeight
     }
   },

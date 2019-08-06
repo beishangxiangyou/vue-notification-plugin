@@ -38,12 +38,14 @@
     },
     methods: {
       handleClose() {
+        console.log(33333333333333333)
         this.$emit('close')
       },
       afterLeave() {
         this.$emit('closed')
       },
       afterEnter() {
+        console.log(22222222222222222)
       },
       clearTimer() {
       },
