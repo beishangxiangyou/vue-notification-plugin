@@ -17,7 +17,7 @@
          * autoClose: '1500'
          */
         this.$notify({
-          content: '小哥哥或小姐姐，约吗？'
+          content: '小姐姐，约吗？'
         })
       }
     }
