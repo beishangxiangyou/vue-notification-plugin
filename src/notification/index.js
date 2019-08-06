@@ -1,11 +1,7 @@
-import Notification from './notification.vue'
 import notify from './function'
 
 const _plugin = {
   install(Vue, options) {
-    //组件注册
-    Vue.component(Notification.name, Notification)
-
     // 添加实例方法
     Vue.prototype.$notify = notify
   }
