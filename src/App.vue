@@ -17,7 +17,7 @@
          * autoClose: '1500'
          */
         this.$notify({
-          content: '必须输入要做的内容'
+          content: '小哥哥或小姐姐，约吗？'
         })
       }
     }

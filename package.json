@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "zuomiaoshun <zuomiaoshun@pcuu.com>",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "main": "dist/notify.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "https://github.com/beishangxiangyou/vue-notification-plugin.git"
   },
-  "homepage": "https://github.com/beishangxiangyou/vue-notification-plugin",
+  "homepage": "https://github.com/beishangxiangyou",
   "keywords": [
     "vue",
     "notification",
