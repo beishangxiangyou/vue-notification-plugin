@@ -83,7 +83,7 @@
 
   .slide-enter-active,
   .slide-leave-active {
-    transition: all .3s;
+    transition: all .5s;
     transform: translateX(0%);
     opacity: 1;
   }

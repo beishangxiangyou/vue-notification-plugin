@@ -14,12 +14,12 @@ const removeInstance = (instance) => {
 
   instances.splice(index, 1)
 
- /* if (len <= 1) return
+  if (len <= 1) return
   const removeHeight = instance.vm.height
   for (let i = index; i < len - 1; i++) {
     instances[i].verticalOffset =
       parseInt(instances[i].verticalOffset) - removeHeight - gap
-  }*/
+  }
 }
 
 const notify = (options) => {
