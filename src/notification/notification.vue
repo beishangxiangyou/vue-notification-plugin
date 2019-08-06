@@ -1,5 +1,5 @@
 <template>
-  <transition name="fade" @after-leave="afterLeave" @after-enter="afterEnter">
+  <transition name="slide" @after-leave="afterLeave" @after-enter="afterEnter">
     <div
       class="notification"
       :style="style"
@@ -55,6 +55,9 @@
 
 <style scoped lang="scss">
   .notification {
+    position: fixed;
+    right: 20px;
+    bottom: 0;
     display: inline-flex;
     background-color: #303030;
     color: rgba(255, 255, 255, 1);
@@ -63,7 +66,7 @@
     min-width: 280px;
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, .2), 0px 6px 10px 0px rgba(0, 0, 0, .14), 0px 1px 18px 0px rgba(0, 0, 0, .12);
     flex-wrap: wrap;
-    transition: all .3s;
+    /*transition: all .3s;*/
     border-radius: 4px;
 
     .content {
@@ -76,6 +79,19 @@
       margin-left: auto;
       cursor: pointer;
     }
+  }
+
+  .slide-enter-active,
+  .slide-leave-active {
+    transition: all .3s;
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  .slide-enter, .slide-leave-to {
+    transform: translateX(100%);
+    opacity: 0;
+
   }
 
 </style>

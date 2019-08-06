@@ -39,7 +39,7 @@ Vue.use(Notification)
          * autoClose: '1500'
          */
         this.$notify({
-          content: '小姐姐，约吗？'
+          content: '秋处露秋寒霜降'
         })
       }
     }
@@ -94,7 +94,7 @@ Vue.use(Notification)
          * autoClose: '1500'
          */
         this.$notify({
-          content: '小姐姐，约吗？'
+          content: '秋处露秋寒霜降'
         })
       }
     }
