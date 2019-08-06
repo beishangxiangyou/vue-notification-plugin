@@ -1,7 +1,7 @@
 {
   "name": "vue-notification-plugin",
   "description": "手把手教你开发vue插件",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "zuomiaoshun <zuomiaoshun@pcuu.com>",
   "license": "MIT",
   "private": false,

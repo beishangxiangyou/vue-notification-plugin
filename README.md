@@ -3,6 +3,9 @@
 ## 介绍
 当前插件，基于vue2.5.11，用于展示vue插件的开发步骤
 
+## 效果截图
+![效果截图](result.jpg)
+
 ## 安装
 ```bash
 npm install --save-dev vue-notification-plugin
@@ -36,7 +39,7 @@ Vue.use(Notification)
          * autoClose: '1500'
          */
         this.$notify({
-          content: '小哥哥或小姐姐，约吗？'
+          content: '小姐姐，约吗？'
         })
       }
     }
@@ -91,7 +94,7 @@ Vue.use(Notification)
          * autoClose: '1500'
          */
         this.$notify({
-          content: '小哥哥或小姐姐，约吗？'
+          content: '小姐姐，约吗？'
         })
       }
     }
