@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <a href="#" class="btn" @click.stop="_notify">点击我哦~</a>
+    <a href="#" class="btn" @click.stop="_notify">快，删库跑路~</a>
   </div>
 </template>
 
@@ -17,7 +17,7 @@
          * autoClose: '1500'
          */
         this.$notify({
-          content: '秋处露秋寒霜降'
+          content: '当事人表示非常后悔~'
         })
       }
     }
