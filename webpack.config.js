@@ -12,7 +12,8 @@ let entry = './src/main.js',
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
     filename: 'build.js'
-  }
+  },
+  externals = []
 
 /**
  * 生产环境
@@ -22,17 +23,17 @@ if (isProd) {
   output = {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'notify.js',// 起一个与项目相对应的名字
-    // library: 'VueNotify',// script脚本引入时的全局变量，VueNotify
-    libraryTarget: 'umd', // 支持commonjs，es module
-    umdNamedDefine: true // 会对 UMD 的构建过程中的 AMD 模块进行命名，否则就使用匿名的 define。
+    filename: 'notify.js',
+    libraryTarget: 'umd'
   }
+  externals.push('vue')
 }
 
 
 module.exports = {
   entry,
   output,
+  externals,
   module: {
     rules: [
       {
@@ -97,8 +98,7 @@ module.exports = {
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
-    },
-    extensions: ['*', '.js', '.vue', '.json']
+    }
   },
   devServer: {
     historyApiFallback: true,

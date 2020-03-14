@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import Component from './func-notification'
+import NotifyComponent from './func-notification'
 
-const NotificationConstructor = Vue.extend(Component)
+const NotificationConstructor = Vue.extend(NotifyComponent)
 
 const instances = []
 let seed = 1
